@@ -4,4 +4,5 @@ module.exports = {
   Help: require("./help"),
   Commands: require("./commands"),
   Add: require("./add"),
+  Greetings: require("./greetings"),
 };
