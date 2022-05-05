@@ -5,4 +5,5 @@ module.exports = {
   Commands: require("./commands"),
   Add: require("./add"),
   Greetings: require("./greetings"),
+  Guess: require("./guess"),
 };
