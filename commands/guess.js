@@ -1,4 +1,4 @@
-let randomNumber = undefined;
+let numbers = {};
 module.exports = {
   name: "guess",
   aliases: ["g"],
@@ -12,16 +12,16 @@ module.exports = {
     const argument = args[0];
 
     if (argument === "start") {
-      randomNumber = Math.floor(Math.random() * 10);
+      numbers[msg.author.id] = Math.floor(Math.random() * 10);
       return msg.reply("The new game has started. Please guess the number!");
     }
 
-    if (randomNumber === undefined) {
+    if (numbers[msg.author.id] === undefined) {
       return msg.reply("Please start the game by typing start!");
     }
 
-    if (randomNumber === parseInt(argument)) {
-      randomNumber = undefined;
+    if (numbers[msg.author.id] === parseInt(argument)) {
+      delete numbers[msg.author.id];
       return msg.reply("Congrats you won!");
     }
 
