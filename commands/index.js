@@ -6,4 +6,5 @@ module.exports = {
   Add: require("./add"),
   Greetings: require("./greetings"),
   Guess: require("./guess"),
+  Quote: require("./quote"),
 };
